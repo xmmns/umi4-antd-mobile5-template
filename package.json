@@ -1,0 +1,59 @@
+{
+  "name": "umi4-antd-mobile5-template",
+  "version": "0.0.1",
+  "author": "笑梦码侬生",
+  "description": "umi移动端模板项目",
+  "private": true,
+  "scripts": {
+    "analyze": "cross-env ANALYZE=1 max build",
+    "dev": "max dev",
+    "build": "max build",
+    "postinstall": "max setup",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prepare": "husky",
+    "start": "max dev"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@umijs/max": "^4.2.11",
+    "antd-mobile": "^5.36.1",
+    "antd-mobile-icons": "^0.3.0",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/mockjs": "^1.0.6",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@umijs/lint": "^4.2.11",
+    "@umijs/plugin-antd-mobile": "^1.2.0",
+    "@umijs/test": "^4.0.70",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "mockjs": "^1.1.0",
+    "postcss-px-to-viewport-8-plugin": "^1.2.5",
+    "prettier": "^3.3.2",
+    "stylelint": "^14",
+    "typescript": "^5",
+    "yorkie": "^2.0.0"
+  }
+}
